@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta author="Esteban Cairol">
+    <title>Battery API</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body ng-app="bateryWatcher">
+
+    <div class="container">
+        <div ng-controller="DashboardCtrl as dashboard">
+            <div class="alert" ng-class="{'alert-success': battery.charging, 'alert-danger': !battery.charging}">
+                <h1>{{battery.chargingText}}</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://rawgit.com/angular/bower-angular/master/angular.min.js"></script>
+    <script src="battery/app.js"></script>
+    <script src="battery/batteryCtrl.js"></script>
+    <script src="battery/batteryData.js"></script>
+</body>
+
+</html>
